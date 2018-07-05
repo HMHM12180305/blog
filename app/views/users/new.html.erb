@@ -1,0 +1,22 @@
+<h1>Create new user</h1>
+<%= form_for(@user) do |f| %>
+  <p>
+  <div class="field">
+    <%= f.label :name, "名前" %><br>
+    <%= f.text_field :name, placeholder: 'nameを入力してください' %>
+  </div>
+  <div class="field">
+    <%= f.label :email, "E-mail" %><br>
+    <%= f.text_field :email, placeholder: 'emailを入力してください' %>
+  </div>
+  <div class="field">
+    <%= f.label :password, "パスワード" %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "パスワード再入力" %><br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <br>
+  <%= f.submit %>
+<% end %>
